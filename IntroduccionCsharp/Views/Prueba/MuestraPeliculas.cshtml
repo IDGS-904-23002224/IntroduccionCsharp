@@ -1,0 +1,32 @@
+﻿@model List<IntroduccionCsharp.Models.Pelicula>
+
+@{
+    ViewBag.Title = "MuestraPeliculas";
+}
+
+<h2>MuestraPeliculas</h2>
+
+<h2>Muestra Peliculas</h2>
+<div class="containter">
+    <div>
+        <table>
+            <thead>
+                <th>Titulo</th>
+                <th>Duraci&oacute;n</th>
+                <th>Pa&iacute;s</th>
+                <th>Publicaci&oacute;n</th>
+            </thead>
+            <tbody>
+                @foreach(var pelicula in Model)
+                {
+                    <tr>
+                        <td>@pelicula.Titulo</td>
+                        <td>@pelicula.Duracion</td>
+                        <td>@pelicula.Pais</td>
+                        <td>@pelicula.Publicacion.ToString("dd/MM/yyyy")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

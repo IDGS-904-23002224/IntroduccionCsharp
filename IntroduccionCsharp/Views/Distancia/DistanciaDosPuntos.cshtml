@@ -1,0 +1,33 @@
+﻿@model IntroduccionCsharp.Models.Distancia
+
+@{
+    ViewBag.Title = "DistanciaDosPuntos";
+}
+
+<h2>DisntaciaDosPuntos</h2>
+
+<div class="containter">
+    <div class="row">
+        <div class="col-lg-6">
+            <form action="/" method="post">
+                <label for="x1">x1: </label>
+                <input type="text" name="x1" value="" class="form-control" />
+                <br />
+                <label for="y1">y1: </label>
+                <input type="text" name="y1" value="" class="form-control" />
+                <br />
+                <label for="x2">x2: </label>
+                <input type="text" name="x2" value="" class="form-control" />
+                <br />
+                <label for="y2">y2: </label>
+                <input type="text" name="y2" value="" class="form-control" />
+                <br />
+                <input type="submit" value="enviar" />
+
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <br />
+            <h1>La Distancia es: @Html.DisplayFor(model => model.Res)</h1>
+        </div>
+    </div>
