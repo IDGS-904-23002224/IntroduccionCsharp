@@ -14,17 +14,16 @@ namespace IntroduccionCsharp.Models
 
         public void Calcular()
         {
-            for (int i = 0; i == B; i++)
+            int i = 0;
+            int result = 0;
+
+            for (i = 0; i < B; i++)
             {
-                this.Cadena += Convert.ToString(this.A) + " + ";
+                this.Cadena += " + " + Convert.ToString(this.A);
+                result += this.A;
             }
             
-            for (int i = 0; i == B; i++)
-            {
-                this.A += this.A;
-            }
-
-            this.Res = this.Cadena + " = " + Convert.ToString(this.A);
+            this.Res = this.Cadena + " = " + Convert.ToString(result);
 
         }
 
